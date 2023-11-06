@@ -1,11 +1,14 @@
-let str = "Hola, ¿Cómo estás hoy? Todo bien, estoy super. ES";
-function buscarPalabras(texto, buscar) {
-  let arrtext = texto.split(" ");
-  let result = arrtext.filter((element) =>
-    element.toLowerCase().includes(buscar.toLowerCase())
-  );
-  return result;
-  // Tu código aquí
+function agregarMetodoCalculoDescuento(objetoProducto) {
+  objetoProducto.calcularPrecioDescuento = function () {
+    let descuento =
+      objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
+    return objetoProducto.precio - descuento;
+  };
 }
+const storeItem = {
+  precio: 80,
+  porcentajeDeDescuento: 0.1,
+};
 
-console.log(buscarPalabras(str, "es"));
+agregarMetodoCalculoDescuento(storeItem);
+console.log(storeItem.calcularPrecioDescuento());
