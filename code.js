@@ -10,5 +10,10 @@ const storeItem = {
   porcentajeDeDescuento: 0.1,
 };
 
-agregarMetodoCalculoDescuento(storeItem);
-console.log(storeItem.calcularPrecioDescuento());
+const storeItem2 = {
+  precio: 5,
+  porcentajeDeDescuento: 0.5,
+};
+
+agregarMetodoCalculoDescuento(storeItem2);
+console.log(storeItem2.calcularPrecioDescuento());
