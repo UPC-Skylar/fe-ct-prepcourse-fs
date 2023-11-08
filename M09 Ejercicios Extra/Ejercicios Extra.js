@@ -89,14 +89,32 @@ function deleteAbc(string) {
 }
 
 function sortArray(arrayOfStrings) {
+  let aux;
+  for (let i = 0; i < arrayOfStrings.length - 1; i++) {
+    for (let k = i + 1; k < arrayOfStrings.length; k++) {
+      if (arrayOfStrings[i].length > arrayOfStrings[k].length) {
+        aux = arrayOfStrings[k];
+        arrayOfStrings[k] = arrayOfStrings[i];
+        arrayOfStrings[i] = aux;
+      }
+    }
+  }
+  return arrayOfStrings;
   // Recibes un arreglo de strings.
   // Debe retornar un nuevo arreglo, pero con las palabras ordenadas en orden creciente a partir
   // de la longitud de cada string.
-  // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
+  // [EJEMPLO]: ["looking", "You", "are", "beautiful" ]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
 }
 
 function buscoInterseccion(array1, array2) {
+  let result = [];
+  array1.forEach((element) => {
+    for (let i = 0; i < array2.length; i++) {
+      if (element === array2[i]) result.push(element);
+    }
+  });
+  return result;
   // Recibes dos arreglos de números.
   // Debes retornar un nuevo arreglo en el que se guarden los elementos en común entre ambos arreglos.
   // [EJEMPLO]: [4,2,3] U [1,3,4] = [3,4].
