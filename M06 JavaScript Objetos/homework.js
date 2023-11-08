@@ -63,7 +63,7 @@ function eliminarPropiedad(objeto, propiedad) {
 }
 
 function tieneEmail(objetoUsuario) {
-  return objetoUsuario.hasOwnProperty("email");
+  return Boolean(objetoUsuario.email) == true;
   // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
   // En ese caso retornar true. Caso contrario, false.
   // Tu código:
@@ -140,6 +140,7 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
   // PorcentajeDeDescuento ---> 0.2
   // Precio final ---> 8
   // Tu código:
+  return objetoProducto;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
