@@ -1,9 +1,8 @@
-function tieneEmail(objetoUsuario) {
-  return !objetoUsuario.hasOwnProperty("email") ? true : false;
-  // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
-  // En ese caso retornar true. Caso contrario, false.
+function capicua(numero) {
+  return (numero + "").split("");
+  // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
+  // Caso contrario: "No es capicua".
   // Tu código:
 }
 
-console.log(tieneEmail({ usernombre: "Jhon", email: null }));
-console.log(null == false);
+console.log(capicua(12321));
